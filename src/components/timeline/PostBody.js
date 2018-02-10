@@ -2,6 +2,30 @@ import React, { Component } from 'react';
 
 import Post from './Post';
 
+const activities = [
+    {
+    timestamp: new Date().getTime(),
+    text: "Ate lunch",
+    user: {
+      id: 1,
+      name: 'Nate',
+      avatar: "http://www.croop.cl/UI/twitter/images/doug.jpg"
+    },
+    comments: [
+      { from: 'Ari', text: 'Me too!' }
+    ]
+  },
+  {
+    timestamp: new Date().getTime(),
+    text: "Woke up early for a beautiful run",
+    user: {
+      id: 2, name: 'Ari',
+      avatar: "http://www.croop.cl/UI/twitter/images/doug.jpg"
+    },
+    comments: [{ from: 'Nate', text: 'I am so jealous' }]
+  },
+]
+
 export default class TitleBar extends Component {
   render() {
     return (
@@ -9,42 +33,7 @@ export default class TitleBar extends Component {
           <div className="col justify-content-start">
             <div className="line"></div>
 
-            <Post />
-
-            <div className="item">
-              <div className="avatar">
-                <img
-                  alt='doug' src="http://www.croop.cl/UI/twitter/images/doug.jpg" />
-              </div>
-
-              <div>
-                <span className="time">10 am</span>
-                <p>Read Day two article</p>
-              </div>
-            </div>
-
-            <div className="item">
-              <div className="avatar">
-                <img
-                  alt='doug' src="http://www.croop.cl/UI/twitter/images/doug.jpg" />
-              </div>
-              <div>
-                <span className="time">10 am</span>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              </div>
-            </div>
-
-            <div className="item">
-              <div className="avatar">
-                <img
-                  alt='doug' src="http://www.croop.cl/UI/twitter/images/doug.jpg" />
-              </div>
-
-              <div>
-                <span className="time">2:21 pm</span>
-                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-              </div>
-            </div>
+            {activities.map((activity) => <Post activity={activity}/>)}
 
           </div>
         </div>

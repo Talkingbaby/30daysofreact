@@ -3,6 +3,17 @@
   margin: 1rem 0;
 }
 
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comments sub {
+  bottom: .50rem;
+  margin: .25rem;
+}
+
 .line {
   position: absolute;
   height: 100%;

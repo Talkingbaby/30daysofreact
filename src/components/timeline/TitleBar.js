@@ -5,12 +5,12 @@ export default class TitleBar extends Component {
     return (
           <div className="input-group mb-3">
             <div className="input-group-prepend">
-              <span className="input-group-text" id="basic-addon1">Timeline</span>
+              <span className="input-group-text" id="basic-addon1">{this.props.title}</span>
             </div>
             <input type="text" className="form-control"
               placeholder="Search ..." />
             <div className="input-group-append">
-              <span className="input-group-text"><div className="fa fa-search searchIcon"></div></span>
+              <span className="input-group-text"><i className="material-icons">&#xE8B6;</i></span>
             </div>
           </div>
     )
