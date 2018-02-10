@@ -1,0 +1,22 @@
+.item {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.line {
+  position: absolute;
+  height: 100%;
+  left: 2.5rem;
+  top: 0;
+  z-index: -1;
+  border: 1px solid grey;
+}
+
+.avatar {
+  margin-right: 1rem;
+}
+
+.avatar img {
+  border-radius: 100%;
+  width: 3rem;
+}
